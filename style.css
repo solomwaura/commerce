@@ -1,0 +1,165 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color:#f1f1f1;
+}
+
+/* styling the header */
+.form-group {
+  background-color: #e7e4e4;
+  padding: 5px;
+  border-radius: 15px;
+}
+.btn btn-default {
+  background-color: aqua;
+}
+#search {
+  width: 70%;
+
+}
+.control {
+  border: none;
+  padding: 5px;
+}
+.cont {
+  padding: 5px;
+  background-color: aqua;
+}
+.cont2 {
+  padding: 10px 0;
+}
+.svg {
+  width: 30px;
+}
+
+/* styling the login */
+* {
+  padding: 0px;
+  margin: 0;
+}
+
+#account ul li {
+list-style: none;
+padding: 4px;
+}
+#account ul li a {
+  text-decoration: none;
+}
+
+#account .account {
+  display: none;
+  position: relative;
+  background-color: lightgreen;
+  padding: 5px;
+
+
+}
+
+#account .account ul li{
+  align-items: flex-start;
+}
+#account .account ul li a {
+  color: red;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-bottom: 1px dotted white;
+}
+#account .account ul li a:last-child {
+  border-bottom: none;
+}
+
+#account ul li:hover .account {
+  display: block;
+}
+/* styling the footer */
+
+#footer {
+  padding: 15px 0;
+  background-color: black;
+}
+
+#footer h4,h5 {
+  color: white;
+  border-bottom: 2px solid aqua;
+}
+
+textarea {
+  background-color: rgb(160, 154, 154);
+  margin: 5px;
+}
+#complain {
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+}
+#subscribe {
+  padding: 5px;
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+}
+#reg {
+  background-color: aquamarine;
+  padding: 15px;
+}
+#account a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+}
+
+#guide a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+}
+#cart a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+}
+#link {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+}
+
+ /* Admin page styling */
+
+ .del {
+   padding: 4px;
+   background-color: red;
+   text-decoration: none;
+   color: white;
+ }
+ .edit {
+  padding: 4px;
+  background-color:greenyellow;
+  text-decoration: none;
+  color: white;
+}
+#admin {
+  background-color: orange;
+}
+#dash {
+background-color: orangered;
+min-height: 100vh;
+}
+#dash a {
+text-decoration: none;
+color: white;
+font-size: 18px;
+letter-spacing: 2px;
+}
+#dash h2 {
+text-decoration: none;
+letter-spacing: 2px;
+border-bottom: 2px solid white;
+}
+#dash ul li {
+text-decoration: none;
+list-style: none;
+border-bottom: 1px solid greenyellow;
+}
