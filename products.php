@@ -1,5 +1,5 @@
 <?php include 'conn.php'; ?>
-<?php include 'process.php'; ?>
+<!-- <?php include 'process.php'; ?> -->
 <?php include 'links.php'; ?>
 
 
@@ -13,9 +13,10 @@
 	
 		$image ='new/'.$_FILES['image']['name'];
 		$image = mysqli_real_escape_string($conn,$image);
-    $pname = $_POST['name'];
+
+        $pname = $_POST['name'];
 		$category = $_POST['category'];
-    $price = $_POST['price'];
+        $price = $_POST['price'];
 		$description = $_POST['description'];
 		$merchant = $_SESSION['merchant'];
 
@@ -26,8 +27,9 @@
 
 		if (preg_match("!image!", $_FILES['image']['type'])) {
 			if (copy($_FILES['image']['tmp_name'], $image)) {
-				$sql = "INSERT INTO latest(pname,category_id,price,image,merchant,description) VALUES ('$pname','$category','$price','$image','$merchant','$description')";
-				if (mysqli_query($conn,$sql)) {
+				$psql = "INSERT INTO latest(pname,category_id,price,a_image,merchant,a_description) 
+				VALUES ('$pname','$category','$price','$image','$merchant','$description')";
+				if (mysqli_query($conn,$psql)) {
 					$result1 ="image successfully uploaded";
 				}
 				else {

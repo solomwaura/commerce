@@ -1,7 +1,12 @@
 <?php  include 'header.php'; ?>
+
  
-<!-- <?php echo $_SESSION['user']; ?> -->
-<a href="index.php">Home</a>
+<style>
+ #checkout {
+	 display:none;
+ }
+</style>
+
 <div class="row">
 <div class="col-md-1"></div>
 	<div class="col-md-10">
@@ -69,6 +74,8 @@ if(isset($_GET["action"]))
 						<th width="5%">Action</th>
 					</tr>
 					<?php
+
+					$invoice = mt_rand(100,10000);
 					if(empty($_SESSION["shopping_cart"])) 
 				{ 
 					 $notice = "No items added in the cart ";
@@ -81,6 +88,8 @@ if(isset($_GET["action"]))
 					    
 						foreach($_SESSION["shopping_cart"] as $keys => $values)
 						{
+
+
 					?>
 					<tr>
 						<td><?php echo $values["item_name"]; ?></td>
@@ -114,12 +123,22 @@ if(isset($_GET["action"]))
 <div class="row">
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
-		<butto class="btn btn-primary">Order</butto>
+		<!-- <button class="btn btn-primary">Checkout</button> -->
 	</div>
 	<div class="col-md-2"></div>
 </div>
 
+<div class="row">
+<div class="col-md-3">
 
+</div>
+<div class="col-md-6">
+
+<?php include './payment/makepay.php'; ?>
+</div>
+
+<div class="col-md-3"></div>
+</div>
 
 
 	</body>

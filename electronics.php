@@ -1,26 +1,43 @@
 <?php include 'conn.php'; ?>
  <?php include 'header.php'; ?>
- 
-<div class="row">
+ <?php include 'searchform.php';?>
 
+
+
+ <?php 
+ 
+ ?>
+ <div class="row">
+ <div class= "col-md-3">
+ <?php include 'search.php'; ?>
+ </div>
+ <hr>
+ </div>
+<div class="row">
+	
 <?php
 
-$sql = "SELECT *FROM electronics ORDER BY id ASC";
+		 
+			
+			$sql = "SELECT *FROM latest WHERE category_id = 1 ORDER BY id ASC";
 $result =mysqli_query($conn,$sql);
-
 if(mysqli_num_rows($result) > 0)
 {
   while($row = mysqli_fetch_array($result)){
-    ?>
+		
+			?>
+	
+
 <div class="col-md-3" style="margin: 10px 0;">
 <form method="post" action="cart.php?action=add&id=<?php echo $row['id']; ?>">
-					<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
-						<img src="<?php echo $row["image"]; ?>" class="img-responsive"  style="height: 200px;"/><br />
+					<div style="border:none; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
+						<img src="<?php echo $row["a_image"]; ?>" class="img-responsive"  style="height: 200px;"/><br />
 
 						<h4 class="text-info"><?php echo $row["pname"]; ?></h4>
-
-						<h4 class="text-danger">$ <?php echo $row["price"]; ?></h4>
-
+					
+						<h4 class="text-danger">
+						<label>Price: </label>$ <?php echo $row["price"]; ?></h4>
+						<label>Quantity:</label>
 						<input type="text" name="quantity" value="1" class="form-control" />
 
 						<input type="hidden" name="hidden_name" value="<?php echo $row["pname"]; ?>" />
@@ -31,16 +48,18 @@ if(mysqli_num_rows($result) > 0)
 
 					</div>
 				</form>
-
-</div>
+			</div>
 <?php
   }
 }
-
+ 
 ?>
+
 </div>
  </div>
-   
+ 
+
+ 
+  
  </body>
  <?php include 'footer.php'; ?>
- </html>

@@ -1,5 +1,6 @@
  <?php include 'conn.php'; ?>
  <?php include 'header.php'; ?>
+ <?php include 'searchform.php';?>
 
 
 
@@ -18,7 +19,7 @@
 
 		 
 			
-			$sql = "SELECT *FROM products ORDER BY id ASC";
+			$sql = "SELECT *FROM latest ORDER BY id ASC";
 $result =mysqli_query($conn,$sql);
 if(mysqli_num_rows($result) > 0)
 {
@@ -30,7 +31,7 @@ if(mysqli_num_rows($result) > 0)
 <div class="col-md-3" style="margin: 10px 0;">
 <form method="post" action="cart.php?action=add&id=<?php echo $row['id']; ?>">
 					<div style="border:none; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
-						<img src="<?php echo $row["image"]; ?>" class="img-responsive"  style="height: 200px;"/><br />
+						<img src="<?php echo $row["a_image"]; ?>" class="img-responsive"  style="height: 200px;"/><br />
 
 						<h4 class="text-info"><?php echo $row["pname"]; ?></h4>
 					

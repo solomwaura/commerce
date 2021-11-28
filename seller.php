@@ -27,7 +27,7 @@
         <?php 
 
           $merchant = $_SESSION['merchant'];
-$sql = "SELECT *FROM new WHERE merchant = '$merchant' ORDER BY id ASC";
+$sql = "SELECT *FROM latest WHERE merchant = '$merchant' ORDER BY id ASC";
 $result =mysqli_query($conn,$sql);
 if(mysqli_num_rows($result) > 0)
 {
@@ -41,7 +41,7 @@ if(mysqli_num_rows($result) > 0)
 
 <td><?php echo $row['category_id']; ?></td>
 <td><?php echo "$ " .$row['price']; ?></td>
-<td><?php echo  $row['description']; ?></td>
+<td><?php echo  $row['a_description']; ?></td>
 <td>
   <a href="new.php"class="btn btn-danger"  >Delete</a>
   

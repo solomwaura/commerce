@@ -1,6 +1,6 @@
 <?php include 'customerregistercode.php'; ?>
 <?php include 'customerlogincode.php'; ?>
-<!-- <?php include 'search.php'; ?> -->
+
 
 <!DOCTYPE html>
  <html lang="en">
@@ -30,11 +30,30 @@ padding: 4px;
 #account ul li:hover .account {
   display: block;
 }
+#category {
+  padding: 10px;
+  background-color: orangered;
+}
+#category a {
+  text-decoration: none;
+  color: white;
+  font-size:18px;
+  letter-spacing: 2px;
+  padding:10px;
+  border-radius:3px;
+}
+#category a:hover{
+  background-color:white;
+  color:orangered;
+}
+#category a:active {
+  background-color:black;
+}
    </style>
  </head>
  <body>
    
-   <!-- <nav class="navbar navbar-default navbar-fixed-top"> -->
+
     <div class="cont">
 
       <div class="row">
@@ -50,12 +69,12 @@ padding: 4px;
           +25474790215</a>
         </div>
         <div class="col-md-2">
-          <a href="seller.php" id="link">
+          <a href="sellerlogin.php" id="link">
             Sell on Mini
           </a>
         </div>
         <div class="col-md-1" id="guide">
-          <a href="admin.php">Guide</a>
+          <a href="guide.php">Guide</a>
         </div>
         <div class="col-md-2" id="account">
           <ul>
@@ -64,8 +83,8 @@ padding: 4px;
             <div class="account">
               <center>
               <ul>
-                <li>  <a href="customerlogin.php">As Customer</a></li>
-                <li><a href="sellerlogin.php">As Merchant</a></li>
+                <li>  <a href="customerlogin.php">Customer</a></li>
+                <li><a href="sellerlogin.php">Merchant</a></li>
               </ul>
               </center>
             </div>
@@ -82,40 +101,30 @@ padding: 4px;
         </div>
       </div>
        </div>
-
-       <div class="cont2">
-         <div class="row">
-           <div class="col-md-1">
-
-           </div>
-           <div class="col-md-4">
-           <div class="dropdown">
-           <span class="input-group-addon">Product Category</span>
-             <select class="control" name="category" onchange="display" id="category">
-               <option value="1 ">Electronics & Computing devices</option>
-               <option value="2">Clothing</option>
-               
-               <option value="4">Housing & Furnitures</option>
-               <option value="3">Food & Drinks </option>
-               <option value="category.php">All </option>
-             </select>
-           </div>
-           </div>
-           <div class="col-md-7">
-             <div id="search"> 
-              <form class="navbar-form navbar-left" role="search" action="index.php" method="POST">
-                <div class="form-group">
-                  <span class="input-group-addon">&#8595</span>
-                  <input type="text" class="control" placeholder="Search" id="search" name="search">
-                  
-                </div>
-                <div class="form-group">
-                <input type="submit" value="search" name="request" />
-                </div>
-              </form>
-             </div>
-           </div>
-         </div>
-       </div>
-  <!-- </nav> -->
+        <div class="row" id="category"> 
+        <div class="col-sm-1">
+       
+        </div>
+        <div class="col-sm-1">
+        <a href="index.php">Home</a>
+        </div>
+        <div class="col-md-3">
+        <a href="electronics.php">Electronics & Computing </a>
+            </div>
+            <div class="col-sm-1">
+            <a href="clothing.php">Clothing</a>
+            </div>
+            <div class="col-md-2">
+        <a href="drinks.php">Food & Drinks</a>
+            </div>
+            <div class="col-sm-3">
+            <a href="furnitures.php">Housing & Funitures</a>
+            </div>
+            <div class="col-sm-1">
+        
+        </div>
+        </div>
+      
+ 
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

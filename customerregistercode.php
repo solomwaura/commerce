@@ -44,12 +44,12 @@ if(isset($_POST['register'])) {
   $hashed = hash('sha512',$pass);
   $salted = "jdfhjwfdfjsh".$hashed."hdhjdkjddsk";
 
-  $sql = "INSERT INTO users(fname,lname,email,a_password)
+  $csql = "INSERT INTO users(fname,lname,email,a_password)
    VALUES('$fname','$lname','$email','$salted')";
 
-   if($conn->query($sql) == TRUE) {
+   if($conn->query($csql) == TRUE) {
 
-    header('location:index.php');
+    header('location:customerlogin.php');
    }
    else {
      $message ="Failed to register";

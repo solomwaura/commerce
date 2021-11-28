@@ -163,3 +163,23 @@ text-decoration: none;
 list-style: none;
 border-bottom: 1px solid greenyellow;
 }
+
+#category {
+  padding: 10px;
+  background-color: orangered;
+}
+#category a {
+  text-decoration: none;
+  color: white;
+  font-size:18px;
+  letter-spacing: 2px;
+  padding:10px;
+  border-radius:3px;
+}
+#category a:hover{
+  background-color:white;
+  color:orangered;
+}
+#category a:active {
+  background-color:black;
+}
